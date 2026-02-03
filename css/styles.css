@@ -65,6 +65,7 @@ body {
     padding: 96px 0;
 }
 
+
 /* -----HEADER----- */
 
 
@@ -80,18 +81,38 @@ body {
 
 .page-header .container {
     display: flex;
-    /* в одну лінію навігацію + контакти */
+    /* в одну лінію навігація + контакти */
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-/* .header-nav {
-    display: flex;
-    align-items: center;
-}  */
+.nav-link {
+    position: relative;
+    display: block;
+    padding: 24px 0;
 
-.contacts {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #404bbf;
+}
+  
+
+.header-nav .list {
+    display: flex;
+    gap: 40px;
+}
+
+.header-nav, .contacts {
     /* font-style: normal; */
     display: none;
 }
@@ -185,6 +206,7 @@ a {
 }
 
 .burger-btn {
+    display: flex;
     background-color: transparent;
     border: none;
     padding: 0;
@@ -196,6 +218,19 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+
+    .burger-btn {
+        display: none;
+    }
+    
+    .header-nav {
+        display: block;
+    }
+    
+    .contacts {
+        display: block;
+    }
+
     .list {
         display: flex;
         gap: 40px;
@@ -206,13 +241,68 @@ a {
     }
 
     .contacts-list {
+        display: flex;
         flex-direction: column;
         gap: 12px;
     }
-}
+
+    .header-nav .list {
+        display: flex;
+        gap: 40px;
+    }
+
+    .contacts-link {
+        font-style: normal;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .contacts-link:hover,
+    .contacts-link:focus {
+        color: #404bbf;
+    }
+}    
 
 
 @media screen and (min-width: 1158px) {
+
+    .nav-link {
+        position: relative;
+        display: block;
+        padding: 24px 0;
+    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+    
+        color: #2e2f42;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .nav-link:hover,
+    .nav-link:focus {
+        color: #404bbf;
+    }
+    
+    .nav-link.current {
+        color: #404bbf;
+    }
+    
+    .nav-link.current::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+    
+        width: 100%;
+        height: 4px;
+        background-color: #404bbf;
+        border-radius: 2px;
+    }
 
     .nav-list,
     .contacts {
@@ -239,6 +329,7 @@ a {
     width: 100%;
     height: 100%;
     background-color: #ffffff;
+    z-index: 1000;
 
     opacity: 0;
     visibility: hidden;
