@@ -870,6 +870,7 @@ a {
     .team-card {
         width: calc((100% - 24px) / 2);
     }
+
 }
 
 @media screen and (min-width: 1158px) {
@@ -877,6 +878,12 @@ a {
     .team-card {
         width: calc((100% - 72px) / 4);
     }
+
+    .team-list {
+    display: flex;
+    gap: 24px;
+   }
+    
 }
 
 
@@ -1177,6 +1184,29 @@ p {
 
 
 @media screen and (min-width: 768px) {
+
+    .page-footer {
+        padding: 96px 0 96px 92px;
+    }
+
+    .footer-container {
+    flex-wrap: wrap;
+    flex-direction: unset;
+    gap: 72px 24px;
+}
+
+.text-footer {
+    width: 264px;
+}
+
+.footer-logo {
+    margin: 0;
+}
+
+.footer-social {
+    text-align: left;
+    margin: 0;
+}
 
     .page-footer .container {
         flex-direction: row;
