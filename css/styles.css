@@ -48,6 +48,10 @@ a {
     outline: none;
 }
 
+address {
+    font-style: normal;
+}
+
 img {
     display: block;
     max-width: 100%;
@@ -207,10 +211,6 @@ button {
         border-radius: 2px;
     }
 
-    address {
-        font-style: normal;
-    }
-
     .contacts-list {
         display: flex;
         flex-direction: column;
@@ -242,6 +242,14 @@ button {
 
 
 @media screen and (min-width: 1158px) {
+
+    .page-header .container {
+        justify-content: flex-start;
+    }
+    
+    .page-header .contacts {
+         margin-left: auto;
+    }
 
     .header-logo {
         margin-right: 76px;
