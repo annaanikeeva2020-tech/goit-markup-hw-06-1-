@@ -562,6 +562,7 @@ button {
 }
 
 .features-item {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -738,6 +739,7 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 64px 24px;
+        justify-content: center;
     }
 
     .team-card {
