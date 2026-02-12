@@ -894,6 +894,7 @@ button {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    text-align: left;
 }
 
 .logo-part-footer, 
@@ -1108,7 +1109,7 @@ button {
 @media screen and (min-width: 1158px) {
     
     .page-footer {
-        padding: 100px auto;
+        padding: 100px 0;
     }
 
     .footer-container {
